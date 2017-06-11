@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Calculatrice {% endblock %}
+{% block content %}
+	<h1>Ma super calculatrice</h1>
+	<p>{{nombre1}} + {{nombre2}}, ça fait <strong>{{resultat}}</strong></p>
+	<p>{%if resultat > 20 %}
+		Le résultat est supérieur à 20.
+	{% else %}
+		Le résultat est inférieur à 20
+	{% endif %}</p>
+{% endblock %}
+
+
+

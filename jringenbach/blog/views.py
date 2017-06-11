@@ -9,11 +9,13 @@ def home(request):
 		  <p> Blog de Julien RINGENBACH</p> """
 	return HttpResponse(text)
 
+def addition(request,nombre1, nombre2):
+	resultat = int(nombre1) + int(nombre2)
+	return render(request, 'blog/addition.html', locals())
+
 def view_article(request, num_article):
 	reponse = "Vous avez essayé de voir l'article {}.".format(num_article)
 	return HttpResponse(reponse)
 
-def contact(request):
-	reponse = """<h1>Julien RINGENBACH</h1>
-		     <h2>Contact</h2>"""
-	return HttpResponse(reponse)
+def bonjour(request, nom):
+	return render(request, "blog/bonjour.html", locals())
