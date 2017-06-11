@@ -1,21 +1,20 @@
 # -*- coding:Utf-8 -
 
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponse, Http404
+from blog.models import Article
 
 # Create your views here.
-def home(request):
-	text = """<h1>Blog de Julien RINGENBACH</h1>
-		  <p> Blog de Julien RINGENBACH</p> """
-	return HttpResponse(text)
+def accueil(request):
+	"""Page d'accueil du blog """
+	articles = Article.objects.all()
+	return render(request, "blog/accueil.html", {'derniers_articles':articles})
 
 def addition(request,nombre1, nombre2):
 	resultat = int(nombre1) + int(nombre2)
 	return render(request, 'blog/addition.html', locals())
 
-def view_article(request, num_article):
-	reponse = "Vous avez essayé de voir l'article {}.".format(num_article)
-	return HttpResponse(reponse)
-
-def bonjour(request, nom):
-	return render(request, "blog/bonjour.html", locals())
+def lire(request, idArticle):
+	"""Page permettant de lire un article du blog """
+	article = get_object_or_404(Article, id=idArticle)
+	return render(request, 'blog/lire.html', {'article':article})
