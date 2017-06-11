@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Blog : Julien RINGENBACH{% endblock %}
+{% block content %}
+    <h1>Page d'accueil du blog de Julien RINGENBACH</h1>
+    {% for article in derniers_articles %}
+        <div class="articleClass">
+            <h2>{{ article.titre }}</h2>
+            <h3>{{ article.categorie }}</h3>
+            <p>{{ article.contenu | truncatewords_html:80 }}</p>
+            <p><a href="{% url 'lire' article.id %}">Lire la suite</a></p>
+        </div>
+    {% empty %}
+        <p>Aucun article</p>
+    {% endfor %}
+{% endblock %}

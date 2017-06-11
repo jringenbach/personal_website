@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %} Titre : {{article.titre}} {% endblock %}
+{% block content %}
+    <div class="articleComplet">
+        <h1>{{article.titre}}</h1>
+        <h2>{{article.contenu}}</h2>
+        <p>{{article.contenu | linebreaks}}</p>
+    </div>
+{% endblock %}
