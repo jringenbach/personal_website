@@ -1,5 +1,7 @@
 {% extends "base.html" %}
-{% block title %}Blog : Julien RINGENBACH{% endblock %}
+{% block head %}
+	<title>Blog : Julien RINGENBACH</title>
+{% endblock %}
 {% block content %}
     <h1>Page d'accueil du blog de Julien RINGENBACH</h1>
     {% for article in derniers_articles %}

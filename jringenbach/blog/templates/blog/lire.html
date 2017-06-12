@@ -1,5 +1,9 @@
 {% extends "base.html" %}
-{% block title %} Titre : {{article.titre}} {% endblock %}
+
+{% block head %}
+	<title>Blog : Julien RINGENBACH</title>
+{% endblock %}
+
 {% block content %}
     <div class="articleComplet">
         <h1>{{article.titre}}</h1>
