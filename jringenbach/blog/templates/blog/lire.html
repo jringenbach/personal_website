@@ -3,7 +3,7 @@
 {% block content %}
     <div class="articleComplet">
         <h1>{{article.titre}}</h1>
-        <h2>{{article.contenu}}</h2>
+        <h2>{{article.categorie.nom_cat}}</h2>
         <p>{{article.contenu | linebreaks}}</p>
     </div>
 {% endblock %}
