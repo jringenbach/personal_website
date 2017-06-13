@@ -28,8 +28,10 @@ var view = new ol.View({
 var map = new ol.Map({
     target : 'map',
     layers : [layer],
-    interactions : [interaction],
-    controls : [control],
     overlays : [overlay],
     view : view
 });
+
+/**Pour garder les intéractions et les contrôles de base de la carte, tout en ajoutant les nôtres, on fait : */
+map.addInteraction(interaction);
+map.addControl(control);
