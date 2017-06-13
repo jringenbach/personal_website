@@ -12,3 +12,8 @@ def begin(request):
 def map02(request):
 	"""OpenLayers 3 Beginner's guide - chapter 2 - Map example """
 	return render(request, "map/map02.html", locals())
+
+def map03(request):
+	"""OpenLayers 3 Beginner's guide - chapter 2 - Second Example - Overlays
+	We'll see how to display the position of the mouse cursor with overlays"""
+	return render(request, "map/map03.html", locals())

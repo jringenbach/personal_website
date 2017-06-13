@@ -1,0 +1,16 @@
+h1{
+   background-color: yellow;
+}
+
+#map {
+   background-color: #b5d0d0;
+   height: 50%;
+   width: 50%;
+}
+
+#overlay{
+    background-color: white;
+    border : 1px solid black;
+    border-radius: 10px;
+    padding : 5px 10px;
+}
