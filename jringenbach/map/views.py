@@ -17,3 +17,7 @@ def map03(request):
 	"""OpenLayers 3 Beginner's guide - chapter 2 - Second Example - Overlays
 	We'll see how to display the position of the mouse cursor with overlays"""
 	return render(request, "map/map03.html", locals())
+
+def map04(request):
+	"""OpenLayers 3 beginner's guide - Chapter 3 - First example """
+	return render(request, "map/map04.html", locals())
