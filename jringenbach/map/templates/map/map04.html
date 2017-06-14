@@ -5,7 +5,7 @@
 
 {% block head %}
 <!-- On charge la feuille de style de begin.css -->
-	<link rel="stylesheet" href="{% static 'map/css/begin.css' %}" type="text/css"/>
+	<link rel="stylesheet" href="{% static 'map/css/map04.css' %}" type="text/css"/>
 
 	<!-- On charge la feuille de style d'openlayers -->
 	<link rel="stylesheet" href="{% static 'map/css/ol.css' %}" type="text/css"/>
@@ -19,17 +19,22 @@
 <body>
 	{% block content %}
 		<h1> Test sur le webmapping avec OpenLayers</h1>
-		<div id="map">
+		<div id="block">
+			<div id="map" class="half-map">
 			
+			</div>
+			<div id="map2" class="half-map">
+			</div>
 		</div>
 
-		<div id="overlay">
-		</div>
+		<input type="checkbox" id="visible" checked>Toggle Layer Visibility</input>
+
+		<button id="Bouton" onclick="changeTarget();">Change Target</button>
 		
 		<h1> Test sur le webmapping avec OpenLayers</h1>
 
 	<!-- Fichier js relatif à begin.html-->
-	<script type="text/javascript" src="{% static 'map/js/map02.js' %}"></script>
+	<script type="text/javascript" src="{% static 'map/js/map04.js' %}"></script>
 
 	{% endblock %}
 
