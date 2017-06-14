@@ -6,4 +6,5 @@ urlpatterns = [
 	url(r'^map02$', views.map02, name="map02"),
 	url(r'^map03$', views.map03, name="map03"),
 	url(r'^map04$', views.map04, name="map04"),
+	url(r'^map05$', views.map05, name="map05"),
 ]

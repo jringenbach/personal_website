@@ -21,3 +21,7 @@ def map03(request):
 def map04(request):
 	"""OpenLayers 3 beginner's guide - Chapter 3 - First example """
 	return render(request, "map/map04.html", locals())
+
+def map05(request):
+	"""Tests sur les animations de la carte"""
+	return render(request, "map/map05.html", locals())

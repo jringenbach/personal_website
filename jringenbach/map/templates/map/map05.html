@@ -1,0 +1,39 @@
+<!-- Extends doit être le premier tag du template -->
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head %}
+<!-- On charge la feuille de style de begin.css -->
+	<link rel="stylesheet" href="{% static 'map/css/map05.css' %}" type="text/css"/>
+
+	<!-- On charge la feuille de style d'openlayers -->
+	<link rel="stylesheet" href="{% static 'map/css/ol.css' %}" type="text/css"/>
+
+	<!-- On charge la bibliothèque d'OpenLayers -->
+	<script type="text/javascript" src="{% static 'map/js/ol4-1-1/ol.js' %}"></script>
+
+	<title>Map05 : Animations</title>
+{% endblock %}
+
+<body>
+	{% block content %}
+		<h1> Test sur le webmapping avec OpenLayers</h1>
+		<div id="map">
+			
+		</div>
+
+	        <button onclick="doBounce(montpellier);">Bounce To Montpellier</button><br />
+	        <button onclick="doBounce(rome);">Bounce To Rome</button><br />
+	        <button onclick="doPan(montpellier);">Pan To Montpellier</button><br />
+	        <button onclick="doPan(rome);">Pan To Rome</button><br />
+	        <button onclick="doRotate();">Rotate</button><br />
+
+		<h1> Test sur le webmapping avec OpenLayers</h1>
+
+		<!-- Fichier js relatif à begin.html-->
+		<script type="text/javascript" src="{% static 'map/js/map05.js' %}"></script>
+
+	{% endblock %}
+
+</body>
