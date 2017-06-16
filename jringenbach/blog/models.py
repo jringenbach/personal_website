@@ -15,15 +15,15 @@ class Article(models.Model):
 	#Clé étrangère désignant la catégorie de l'article
 	categorie = models.ForeignKey("Categorie")
 	
-	def __str__(self):
+	def __unicode__(self):
 		"""Cette méthode que nous définirons dans tous les modèles
         	nous permettra de reconnaître facilement les différents objets que 
         	nous traiterons plus tard et dans l'administration """
-		return self.titre
+		return u''+self.titre
 
 class Categorie(models.Model):
 	"""Classe représentant la catégorie d'un article """
 	nom_cat = models.CharField(max_length=30)
 
-	def __str__(self):
-		return self.nom_cat
+	def __unicode__(self):
+		return u''+self.nom_cat
